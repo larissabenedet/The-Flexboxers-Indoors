@@ -1,0 +1,29 @@
+// importando a fonte Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+//variáveis 
+$green: #70E000;
+$yellow: #FFE34E;
+$red: #ED3C3C;
+$blue: #1CB0F6;
+$gray: #E2E2E2;
+$textColor: #666666;
+$title: #3C3C3C;
+$background: white;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $background;
+  color: $textColor;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
