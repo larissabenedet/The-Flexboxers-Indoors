@@ -6,7 +6,7 @@
     border-radius: 20px 20px 0 0;
     border-bottom: 3px solid var(--gray);
 
-    .pic img {
+    & > img {
         width: 100px;
     }
 
