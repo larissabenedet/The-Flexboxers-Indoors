@@ -4,7 +4,7 @@ const Profile = () => {
     return (
         <div className={styles.container}>
             <div className={styles.pic}>
-                {true ? (
+                {false ? (
                     <img src="./img/masculino.png" />
                 ) : (
                     <img src="./img/feminino.png" />
