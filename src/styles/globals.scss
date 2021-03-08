@@ -2,14 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 
 // variaveis
-$green: #70e000;
-$yellow: #ffe34e;
-$red: #ed3c3c;
-$blue: #1cb0f6;
-$gray: #e2e2e2;
-$textColor: #666666;
-$title: #3c3c3c;
-$background: white;
+html {
+    --green: #70e000;
+    --yellow: #ffe34e;
+    --red: #ed3c3c;
+    --blue: #1cb0f6;
+    --gray: #e2e2e2;
+    --textColor: #666666;
+    --title: #3c3c3c;
+    --background: white;
+}
 
 * {
     margin: 0;
@@ -19,8 +21,8 @@ $background: white;
 
 html,
 body {
-    background-color: $background;
-    color: $title;
+    background-color: var(--background);
+    color: var(--title);
     font-family: "Poppins", sans-serif;
 }
 
