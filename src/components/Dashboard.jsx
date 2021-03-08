@@ -5,19 +5,24 @@ import styles from "../styles/components/Dashboard.module.scss";
 import Profile from "../components/Profile.jsx";
 import DashboardMenu from "../components/DashboardMenu.jsx";
 import Missions from "../components/Missions.jsx";
+import Instructions from "../components/Instructions.jsx";
 
 const Dashboard = () => {
     return (
         <div className={styles.container}>
-            <div className={styles.left}>
-                <DashboardMenu>
-                    <Profile />
-                    {/* <UserClass /> */}
-                </DashboardMenu>
+            <div className={styles.componentsWrapper}>
+                <div>
+                    <DashboardMenu>
+                        <Profile />
+                        {/* <UserClass /> */}
+                    </DashboardMenu>
+                </div>
+                <div>
+                    <Instructions />
+                    <Missions />
+                </div>
             </div>
-            <div className={styles.right}>
-                <Missions></Missions>
-            </div>
+
             <svg
                 className={styles.wave}
                 viewBox="0 0 1921 463"

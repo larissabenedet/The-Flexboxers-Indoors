@@ -1,9 +1,25 @@
-.container {
-    position: relative;
+.componentsWrapper {
     height: 100vh;
+    max-width: 1366px;
+    margin: auto;
 
     display: grid;
     grid-template-columns: 1fr 2fr;
+    gap: 20px;
+
+    padding: 20px;
+
+    & > div {
+        display: flex;
+        position: relative;
+        z-index: 2;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.container {
+    position: relative;
 }
 
 .wave {
@@ -14,8 +30,4 @@
     width: 100vw;
 
     fill: var(--green);
-}
-
-.left {
-    padding: 20px;
 }
