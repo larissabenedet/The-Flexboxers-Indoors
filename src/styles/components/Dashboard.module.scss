@@ -1,8 +1,9 @@
 .container {
     position: relative;
+    height: 100vh;
 
-    display: flex;
-    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 .wave {
@@ -16,10 +17,5 @@
 }
 
 .left {
-    flex: 0 0 33%;
     padding: 20px;
-}
-
-.right {
-    flex: 0 0 66%;
 }
