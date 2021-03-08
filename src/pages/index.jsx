@@ -1,17 +1,13 @@
 import Head from "next/head";
-import React from "react";
+import Dashboard from "../components/Dashboard";
 
 export default function Home() {
     return (
         <div>
             <Head>
                 <title>Projeto</title>
-                <link rel="icon" href="/favicon.ico" />
             </Head>
-
-            <main>
-                <h1>The Flexboxers</h1>
-            </main>
+            <Dashboard />
         </div>
     );
 }

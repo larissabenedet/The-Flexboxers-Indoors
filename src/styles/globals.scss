@@ -1,29 +1,29 @@
-// importando a fonte Poppins
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+// import poppins
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 
-//variáveis 
-$green: #70E000;
-$yellow: #FFE34E;
-$red: #ED3C3C;
-$blue: #1CB0F6;
-$gray: #E2E2E2;
+// variaveis
+$green: #70e000;
+$yellow: #ffe34e;
+$red: #ed3c3c;
+$blue: #1cb0f6;
+$gray: #e2e2e2;
 $textColor: #666666;
-$title: #3C3C3C;
+$title: #3c3c3c;
 $background: white;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  background-color: $background;
-  color: $textColor;
-  font-family: 'Poppins', sans-serif;
+    background-color: $background;
+    color: $title;
+    font-family: "Poppins", sans-serif;
 }
 
 a {
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+    text-decoration: none;
 }
