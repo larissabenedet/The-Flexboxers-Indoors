@@ -1,24 +1,27 @@
 .container {
     position: relative;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .componentsWrapper {
-    height: 100vh;
+    max-height: 768px;
     max-width: 1366px;
-    margin: auto;
 
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
 
-    padding: 20px;
+    margin: 20px;
 
     & > div {
         display: flex;
         position: relative;
         z-index: 2;
         flex-direction: column;
-        justify-content: center;
     }
 }
 
