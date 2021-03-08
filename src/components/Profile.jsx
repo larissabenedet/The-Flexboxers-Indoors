@@ -10,7 +10,11 @@ const Profile = () => {
                     <img src="./img/feminino.png" />
                 )}
             </div>
-            <div className={styles.info}></div>
+            <div className={styles.info}>
+                <p>Usuário</p>
+                <span>Nível 1</span>
+                {/* <XpBar></XpBar> */}
+            </div>
         </div>
     );
 };
