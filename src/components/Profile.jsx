@@ -1,4 +1,5 @@
 import styles from "../styles/components/Profile.module.scss";
+import XpBar from "../components/XpBar.jsx";
 
 const Profile = () => {
     return (
@@ -11,7 +12,7 @@ const Profile = () => {
             <div className={styles.info}>
                 <p>Usuário</p>
                 <span>Nível 1</span>
-                {/* <XpBar></XpBar> */}
+                <XpBar />
             </div>
         </div>
     );

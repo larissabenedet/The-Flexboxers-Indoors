@@ -1,11 +1,9 @@
-// Fazer container principal
-// Menu
-
 import styles from "../styles/components/Dashboard.module.scss";
 import Profile from "../components/Profile.jsx";
 import DashboardMenu from "../components/DashboardMenu.jsx";
 import Missions from "../components/Missions.jsx";
 import Instructions from "../components/Instructions.jsx";
+import UserClass from "../components/UserClass.jsx";
 
 const Dashboard = () => {
     return (
@@ -14,7 +12,7 @@ const Dashboard = () => {
                 <div>
                     <DashboardMenu>
                         <Profile />
-                        {/* <UserClass /> */}
+                        <UserClass />
                     </DashboardMenu>
                 </div>
                 <div>
