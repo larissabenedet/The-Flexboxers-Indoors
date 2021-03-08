@@ -1,13 +1,16 @@
 import styles from "../styles/components/UserClass.module.scss";
+import { useState } from "react";
 
 const UserClass = () => {
+    const [classImage, setClassImage] = useState("pinceis");
+
     return (
         <div className={styles.container}>
             <div>
                 <span>Classe</span>
                 <div className={styles.className}>
                     <div>
-                        <img src="./img/pinceis.png" alt="Classe" />
+                        <img src={`./img/${classImage}.png`} alt="Classe" />
                     </div>
                     <div>
                         <p>Artista</p>
