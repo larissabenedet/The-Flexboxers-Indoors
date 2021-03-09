@@ -4,11 +4,15 @@ import DashboardMenu from "../components/DashboardMenu.jsx";
 import Missions from "../components/Missions.jsx";
 import Instructions from "../components/Instructions.jsx";
 import UserClass from "../components/UserClass.jsx";
-import Mission from "../components/Mission.jsx";
+import { useContext } from "react";
+import { MissionContext } from "../contexts/MissionsContext";
+import Modal from "../components/Modal";
 
 const Dashboard = () => {
+    const { isModalOpen, closeMissionModal } = useContext(MissionContext);
     return (
         <div className={styles.container}>
+            {isModalOpen ? <Modal onClose={closeMissionModal} /> : null}
             <div className={styles.componentsWrapper}>
                 <div>
                     <DashboardMenu>
@@ -19,15 +23,6 @@ const Dashboard = () => {
                 <div>
                     <Instructions />
                     <Missions>
-                        <div>
-                            <Mission img="./img/bolo.png" />
-                            <Mission img="./img/monociclo.png" />
-                            <Mission img="./img/oculos.png" />
-                        </div>
-                        <div>
-                            <Mission img="./img/livro.png" disabled />
-                            <Mission img="./img/ioga.png" disabled />
-                        </div>
                     </Missions>
                 </div>
             </div>
