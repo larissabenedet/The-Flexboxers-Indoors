@@ -1,22 +1,29 @@
 import styles from "../styles/components/Missions.module.scss";
-import Mission from "../components/Mission.jsx";
+import { useContext } from "react";
+import { MissionContext } from "../contexts/MissionsContext";
+import allMissions from "../../missions.json";
 
 const DashboardMenu = () => {
-    return (
-        <div className={styles.container}>
-            <div className={styles.missionsTree}>
-                <div>
-                    <Mission img="./img/bolo.png" />
-                    <Mission img="./img/monociclo.png" />
-                    <Mission img="./img/oculos.png" />
-                </div>
-                <div>
-                    <Mission img="./img/livro.png" disabled />
-                    <Mission img="./img/ioga.png" disabled />
-                </div>
+  const { newMission } = useContext(MissionContext);
+  return (
+    <div className={styles.container}>
+      <div className={styles.missionsTree}>
+        <div>
+          {allMissions.map((mission, i) => (
+            <div className={styles.mission} key={mission[i]}>
+              <img
+                src={mission.img}
+                key={mission[i]}
+                alt={mission.title}
+                onClick={newMission}
+                id={i}
+              />
             </div>
+          ))}
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default DashboardMenu;

@@ -4,16 +4,17 @@ import allMissions from "../../missions.json";
 export const MissionContext = createContext();
 
 export default function MissionProvider({ children }) {
-  const [level, setLevel] = useState(0);
+  const [level, setLevel] = useState(1);
   const [currentExperience, setCurrentExperience] = useState(76);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeMission, setActiveMission] = useState(null);
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
-  function newMission() {
+  function newMission(e) {
     setIsModalOpen(true);
-    const mission = allMissions[0];
+
+    const mission = allMissions[e.target.id];
     setActiveMission(mission);
   }
 
