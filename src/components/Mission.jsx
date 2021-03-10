@@ -11,7 +11,7 @@ const Mission = (props) => {
         <div
           className={styles.mission}
           onClick={newMission}
-          style={{ filter: "saturate(0)" }}
+          style={{ filter: "saturate(0)", cursor: "not-allowed" }}
         >
           <img src={props.img} alt="mission" />
         </div>
