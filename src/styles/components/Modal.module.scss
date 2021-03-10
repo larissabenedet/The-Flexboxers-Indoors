@@ -9,33 +9,54 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-        .container {
-            position: relative;
-            border: 3px solid var(--gray);
-            background-color: white;
-            color: #333;
-            width: 60%;
-            height: 60%;
-            border-radius: 10px;
-            padding: 15px;
-    
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-    
-            button {
-                background-color: transparent;
-                position: absolute;
-                border: none;
-                color: black;
-                padding: 10px;
-                font-weight: 500;
-                font-size: 20px;
-                top: 0;
-                right: 0;
-                cursor: pointer;
-            }
+
+    .container {
+        position: relative;
+        border: 3px solid var(--gray);
+        background-color: white;
+        color: #333;
+        width: 60%;
+        height: 60%;
+        border-radius: 10px;
+        padding: 15px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        button {
+            background-color: transparent;
+            position: absolute;
+            border: none;
+            color: var(--title);
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
         }
     }
+}
+
+.closeButton {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+        width: 30px;
+        height: 3px;
+        background: black;
+        border-radius: 3px;
+        position: absolute;
+    }
+
+    div:first-child {
+        transform: rotateZ(45deg);
+    }
+
+    div:last-child {
+        transform: rotateZ(-45deg);
+    }
+}
