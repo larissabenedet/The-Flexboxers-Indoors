@@ -36,3 +36,9 @@
 
     fill: var(--green);
 }
+
+@media screen and (min-width: 1920px) {
+    .componentsWrapper {
+        transform: scale(1.35);
+    }
+}
