@@ -10,7 +10,7 @@
 .componentsWrapper {
     max-height: 768px;
     max-width: 1366px;
-    transform: scale(0.95);
+    transform: scale(0.85);
 
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -39,6 +39,6 @@
 
 @media screen and (min-width: 1920px) {
     .componentsWrapper {
-        transform: scale(1.35);
+        transform: scale(1.2);
     }
 }
