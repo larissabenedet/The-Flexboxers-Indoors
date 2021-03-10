@@ -33,7 +33,7 @@ const DashboardMenu = () => {
                         if (i >= 3) {
                             return (
                                 <div
-                                    className={styles.mission}
+                                    className={`${styles.mission} ${styles.disabled}`}
                                     key={mission[i]}
                                 >
                                     <img
