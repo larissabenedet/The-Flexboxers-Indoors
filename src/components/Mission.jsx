@@ -3,26 +3,23 @@ import { useContext } from "react";
 import { MissionContext } from "../contexts/MissionsContext";
 
 const Mission = (props) => {
-  const { newMission } = useContext(
-    MissionContext
-  );
-  if (props.disabled) {
-    return (
-        <div
-          className={styles.mission}
-          onClick={newMission}
-          style={{ filter: "saturate(0)", cursor: "not-allowed" }}
-        >
-          <img src={props.img} alt="mission" />
-        </div>
-    );
-  } else {
-    return (
-        <div className={styles.mission} onClick={newMission} id="0">
-          <img src={props.img} alt="mission" />
-        </div>
-    );
-  }
+    const { newMission } = useContext(MissionContext);
+    if (props.disabled) {
+        return (
+            <div
+                className={`${styles.mission} ${styles.disabled}`}
+                onClick={newMission}
+            >
+                <img src={props.img} alt="mission" />
+            </div>
+        );
+    } else {
+        return (
+            <div className={styles.mission} onClick={newMission} id="0">
+                <img src={props.img} alt="mission" />
+            </div>
+        );
+    }
 };
 
 export default Mission;
