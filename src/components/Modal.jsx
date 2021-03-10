@@ -1,9 +1,9 @@
 import styles from "../styles/components/Modal.module.scss";
 
-const Modal = ({ id = "modal", onClose = () => {} }) => {
-  const handleOutsideClick = (e) => {
-    if (e.target.id === id) onClose();
-  };
+const Modal = ({ id = "modal", onClose }) => {
+    const handleOutsideClick = (e) => {
+        if (e.target.id === id) onClose();
+    };
 
   return (
     <div className={styles.modalActive} id={id} onClick={handleOutsideClick}>
