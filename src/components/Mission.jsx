@@ -8,7 +8,6 @@ const Mission = (props) => {
   );
   if (props.disabled) {
     return (
-      <>
         <div
           className={styles.mission}
           onClick={newMission}
@@ -16,15 +15,12 @@ const Mission = (props) => {
         >
           <img src={props.img} alt="mission" />
         </div>
-      </>
     );
   } else {
     return (
-      <>
         <div className={styles.mission} onClick={newMission} id="0">
           <img src={props.img} alt="mission" />
         </div>
-      </>
     );
   }
 };
