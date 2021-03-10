@@ -3,10 +3,15 @@ import { useContext } from "react";
 import { MissionContext } from "../contexts/MissionsContext";
 
 const Modal = ({ id = "modal", onClose }) => {
-    const { activeMission } = useContext(MissionContext);
+    const { activeMission, completeMission } = useContext(MissionContext);
+
     const handleOutsideClick = (e) => {
         if (e.target.id === id) onClose();
     };
+
+    function handleMissionSucceeded(e) {
+        completeMission()
+      }
 
     return (
         <div
@@ -42,7 +47,7 @@ const Modal = ({ id = "modal", onClose }) => {
                 </main>
 
                 <footer>
-                    <button type="button">Concluir</button>
+                    <button type="button" onClick={handleMissionSucceeded}>Concluir</button>
                 </footer>
             </div>
         </div>

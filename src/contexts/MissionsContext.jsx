@@ -5,7 +5,7 @@ export const MissionContext = createContext();
 
 export default function MissionProvider({ children }) {
   const [level, setLevel] = useState(1);
-  const [currentExperience, setCurrentExperience] = useState(76);
+  const [currentExperience, setCurrentExperience] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeMission, setActiveMission] = useState(null);
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
@@ -35,6 +35,7 @@ export default function MissionProvider({ children }) {
     }
 
     setCurrentExperience(finalExperience);
+    closeMissionModal();
     setActiveMission(null);
   }
 
@@ -57,6 +58,7 @@ export default function MissionProvider({ children }) {
       value={{
         level,
         currentExperience,
+        experienceToNextLevel,
         isLevelUpModalOpen,
         isModalOpen,
         closeLevelUpModal,
