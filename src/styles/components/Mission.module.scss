@@ -27,5 +27,5 @@
 
 .disabled {
     filter: saturate(0);
-    cursor: not-allowed;
+    pointer-events: none;
 }
