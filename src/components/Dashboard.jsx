@@ -9,15 +9,24 @@ import { MissionContext } from "../contexts/MissionsContext";
 import Modal from "../components/Modal";
 import { UserContext } from "../contexts/UserContext";
 import ModalUser from "../components/ModalUser";
+import LevelUpModal from "../components/LevelUpModal";
 
 const Dashboard = () => {
-    const { isModalOpen, closeMissionModal } = useContext(MissionContext);
+    const {
+        isModalOpen,
+        closeMissionModal,
+        isLevelUpModalOpen,
+        closeLevelUpModal,
+    } = useContext(MissionContext);
     const { isFirstTime, closeModalUser } = useContext(UserContext);
 
     return (
         <div className={styles.container}>
-            {isModalOpen ? <Modal onClose={closeMissionModal} /> : null} 
+            {isModalOpen ? <Modal onClose={closeMissionModal} /> : null}
             {isFirstTime ? <ModalUser onClose={closeModalUser} /> : null}
+            {isLevelUpModalOpen ? (
+                <LevelUpModal onClose={closeLevelUpModal} />
+            ) : null}
             <div className={styles.componentsWrapper}>
                 <div>
                     <DashboardMenu>
@@ -27,8 +36,7 @@ const Dashboard = () => {
                 </div>
                 <div>
                     <Instructions />
-                    <Missions>
-                    </Missions>
+                    <Missions></Missions>
                 </div>
             </div>
 
