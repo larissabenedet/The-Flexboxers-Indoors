@@ -1,7 +1,10 @@
 import styles from "../styles/components/Profile.module.scss";
 import XpBar from "../components/XpBar.jsx";
+import { useContext } from "react";
+import { MissionContext } from "../contexts/MissionsContext";
 
 const Profile = () => {
+    const {level} = useContext(MissionContext)
     return (
         <div className={styles.container}>
             {false ? (
@@ -11,7 +14,7 @@ const Profile = () => {
             )}
             <div className={styles.info}>
                 <p>Usuário</p>
-                <span>Nível 1</span>
+                <span>Nível {level}</span>
                 <XpBar />
             </div>
         </div>

@@ -8,6 +8,7 @@
 }
 
 .XpContainer {
+    overflow: hidden;
     width: 100%;
     height: 10px;
     background: var(--gray);
@@ -16,7 +17,6 @@
 
     & > div {
         height: 100%;
-        width: 0%;
         border-radius: 10px;
         background: var(--green);
     }
