@@ -1,11 +1,8 @@
 import styles from "../styles/components/Missions.module.scss";
-import { useContext } from "react";
-import { MissionContext } from "../contexts/MissionsContext";
 import allMissions from "../../missions.json";
 import Mission from "./Mission.jsx";
 
 const Missions = () => {
-    const { newMission } = useContext(MissionContext);
     return (
         <div className={styles.container}>
             <div className={styles.missionsTree}>

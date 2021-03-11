@@ -1,30 +1,27 @@
 import styles from "../styles/components/UserClass.module.scss";
-import { useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "../contexts/UserContext.jsx";
 
 const UserClass = () => {
-    const [classImage, setClassImage] = useState("pinceis");
+  const { nameClass } = useContext(UserContext);
 
-    return (
-        <div className={styles.container}>
-            <div>
-                <span>Classe</span>
-                <div className={styles.className}>
-                    <div>
-                        <img src={`./img/${classImage}.png`} alt="Classe" />
-                    </div>
-                    <div>
-                        <p>Artista</p>
-                        <p>Criatividade, Pensamento</p>
-                    </div>
-                </div>
-                <p>
-                    O Artista tem o dom de sempre encontrar a melhor maneira
-                    para passar o tempo e pode ficar horas criando, movido
-                    apenas pela imaginação.
-                </p>
-            </div>
+  return (
+    <div className={styles.container}>
+      <div>
+        <span>Classe</span>
+        <div className={styles.className}>
+          <div>
+            <img src={nameClass.img} alt={nameClass.title} />
+          </div>
+          <div>
+            <p>{nameClass.title}</p>
+            <p>{nameClass.subtitle}</p>
+          </div>
         </div>
-    );
+        <p>{nameClass.description}</p>
+      </div>
+    </div>
+  );
 };
 
 export default UserClass;

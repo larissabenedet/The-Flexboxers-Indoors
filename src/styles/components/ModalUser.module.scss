@@ -114,13 +114,18 @@
                 filter: brightness(0.8);
             }
 
-            label[for="artista"] {
+            label img {
+                width: 100%;
+                padding: 10px;
+            }
+
+            label[for="0"] {
                 background: var(--blue);
             }
-            label[for="estudioso"] {
+            label[for="1"] {
                 background: var(--red);
             }
-            label[for="explorador"] {
+            label[for="2"] {
                 background: var(--yellow);
             }
 
