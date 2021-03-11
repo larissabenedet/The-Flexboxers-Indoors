@@ -1,19 +1,23 @@
 import styles from "../styles/components/Profile.module.scss";
 import XpBar from "../components/XpBar.jsx";
 import { useContext } from "react";
-import { MissionContext } from "../contexts/MissionsContext";
+import { MissionContext } from "../contexts/MissionsContext.jsx";
+import { UserContext } from "../contexts/UserContext.jsx";
 
 const Profile = () => {
-    const {level} = useContext(MissionContext)
+    const { level } = useContext(MissionContext);
+
+    const { name, gender } = useContext(UserContext);
+
     return (
         <div className={styles.container}>
-            {false ? (
+            {gender === "masculino" ? (
                 <img src="./img/masculino.png" />
             ) : (
                 <img src="./img/feminino.png" />
             )}
             <div className={styles.info}>
-                <p>Usuário</p>
+                <p>{name}</p>
                 <span>Nível {level}</span>
                 <XpBar />
             </div>

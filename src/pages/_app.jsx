@@ -1,15 +1,15 @@
 import "../styles/globals.scss";
-import MissionProvider from "../contexts/MissionsContext";
-import UserContext from "../contexts/UserContext";
+import MissionProvider from "../contexts/MissionsContext.jsx";
+import UserProvider from "../contexts/UserContext.jsx";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <MissionProvider>
-      <UserContext>
-      <Component {...pageProps} />;
-      </UserContext>
-    </MissionProvider>
-  );
+    return (
+        <MissionProvider>
+            <UserProvider>
+                <Component {...pageProps} />;
+            </UserProvider>
+        </MissionProvider>
+    );
 }
 
 export default MyApp;
