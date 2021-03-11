@@ -8,8 +8,13 @@ export default function UserProvider({ children }) {
     const [nameClass, setNameClass] = useState(null);
     const [isFirstTime, setIsFirstTime] = useState(true);
 
-    function closeModalUser() {
-        setIsFirstTime(false);
+    function closeModalUser(e) {
+        e.preventDefault();
+        if (String(name).length > 50) {
+            setIsFirstTime(true);
+        } else {
+            Boolean(name) ? setIsFirstTime(false) : null;
+        }
     }
 
     function handleGenderChange(e) {
