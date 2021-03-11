@@ -10,7 +10,7 @@ export default function UserProvider({ children }) {
 
     function closeModalUser(e) {
         e.preventDefault();
-        if (String(name).length > 50) {
+        if (String(name).length > 30) {
             setIsFirstTime(true);
         } else {
             Boolean(name) ? setIsFirstTime(false) : null;

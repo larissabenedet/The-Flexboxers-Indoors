@@ -27,6 +27,7 @@ const Dashboard = () => {
             {isLevelUpModalOpen ? (
                 <LevelUpModal onClose={closeLevelUpModal} />
             ) : null}
+            
             <div className={styles.componentsWrapper}>
                 <div>
                     <DashboardMenu>
