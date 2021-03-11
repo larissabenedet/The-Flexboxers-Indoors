@@ -2,8 +2,9 @@ import styles from "../styles/components/Missions.module.scss";
 import { useContext } from "react";
 import { MissionContext } from "../contexts/MissionsContext";
 import allMissions from "../../missions.json";
+import Mission from "./Mission.jsx";
 
-const DashboardMenu = () => {
+const Missions = () => {
     const { newMission } = useContext(MissionContext);
     return (
         <div className={styles.container}>
@@ -11,40 +12,14 @@ const DashboardMenu = () => {
                 <div>
                     {allMissions.map((mission, i) => {
                         if (i < 3) {
-                            return (
-                                <div
-                                    className={styles.mission}
-                                    key={mission[i]}
-                                >
-                                    <img
-                                        src={mission.img}
-                                        key={mission[i]}
-                                        alt={mission.title}
-                                        onClick={newMission}
-                                        id={i}
-                                    />
-                                </div>
-                            );
+                            return <Mission mission={mission} i={i} />;
                         }
                     })}
                 </div>
                 <div>
                     {allMissions.map((mission, i) => {
                         if (i >= 3) {
-                            return (
-                                <div
-                                    className={`${styles.mission} ${styles.disabled}`}
-                                    key={mission[i]}
-                                >
-                                    <img
-                                        src={mission.img}
-                                        key={mission[i]}
-                                        alt={mission.title}
-                                        onClick={newMission}
-                                        id={i}
-                                    />
-                                </div>
-                            );
+                            return <Mission mission={mission} i={i} />;
                         }
                     })}
                 </div>
@@ -53,4 +28,4 @@ const DashboardMenu = () => {
     );
 };
 
-export default DashboardMenu;
+export default Missions;
