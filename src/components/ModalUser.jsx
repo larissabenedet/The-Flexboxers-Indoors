@@ -33,22 +33,34 @@ const ModalUser = ({ onClose }) => {
                         >
                             <p>Gênero</p>
                             <div>
-                                <input
-                                    type="radio"
-                                    id="masculino"
-                                    name="genero"
-                                    value="Masculino"
-                                />
-                                <label htmlFor="masculino"> Masculino</label>
-                            </div>
-                            <div>
-                                <input
-                                    type="radio"
-                                    id="feminino"
-                                    name="genero"
-                                    value="Feminino"
-                                />
-                                <label htmlFor="feminino"> Feminino</label>
+                                <div>
+                                    <input
+                                        type="radio"
+                                        id="masculino"
+                                        name="genero"
+                                        value="Masculino"
+                                    />
+                                    <label htmlFor="masculino">
+                                        <img
+                                            src="./img/masculino.png"
+                                            alt="masculino"
+                                        />
+                                    </label>
+                                </div>
+                                <div>
+                                    <input
+                                        type="radio"
+                                        id="feminino"
+                                        name="genero"
+                                        value="Feminino"
+                                    />
+                                    <label htmlFor="feminino">
+                                        <img
+                                            src="./img/feminino.png"
+                                            alt="feminino"
+                                        />
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
