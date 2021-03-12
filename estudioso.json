@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Mais e mais!",
+        "description": "Conhecimento nunca foi uma coisa ruim, com ele fomos a Lua, construímos aviões, telefones e muito mais... Então porque parar de aprender? Escolha um tema que goste e estude mais sobre ele!",
+        "amount": 140,
+        "img": "./img/estante.png"
+    },
+    {
+        "title": "Eureka!",
+        "description": "Você se lembra das feiras de ciências da escola com seus experimentos mirabolantes? Ou de algum programa de TV que mostrou um cientista explodindo algo? Que tal tentar fazer sua própria experiência? Mas cuidado, sem explodir nada!",
+        "amount": 170,
+        "img": "./img/eureka.png"
+    },
+    {
+        "title": "Ensine!",
+        "description": "Uma das melhores formas de aprender algo é ensinando o conteúdo para alguém. Tente ensinar para um amigo, seus familiares ou, se preferir, apenas escreva sobre o que aprendeu.",
+        "amount": 150,
+        "img": "./img/ensinar.png"
+    },
+    {
+        "title": "Fazer novas amizades!",
+        "description": "A internet nos possibilitou diversas redes sociais, com muitas pessoas interessantes que gostam de coisas parecidas. Que tal fazer uma nova amizade? Entre em grupos que tenham o mesmo interesse que você e converse com pessoas novas!",
+        "amount": 140,
+        "img": "./img/amigos.png"
+    },
+    {
+        "title": "Que tal cuidar de alguém?",
+        "description": "Animais são incríveis, não acha? Eles nos ajudam em momentos de tristeza e fazem com que a casa fique mais alegre, e nessa pandemia não podia ser diferente... Brinque com algum animalzinho que você tenha em sua casa ou adote um! Caso não tenha como adotar, siga algum perfil de casas de adoçãos de bichinhos da sua cidade!",
+        "amount": 270,
+        "img": "./img/pets.png"
+    },
+    {
+        "title": "Até um gênio precisa de uma pausa!",
+        "description": "Se até Albert Einstein amava velejar e passar um tempo com sua família após ficar horas em seus estudos, então que tal parar um pouco e descansar a mente para que consiga voltar 100%? Dance, exercite-se, veja um filme, converse com os amigos... Mas não podemos esquecer que estamos em uma pandemia, então ficar em casa é essencial.",
+        "amount": 120,
+        "img": "./img/bateria.png"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Fazer um bolo!",
+        "amount": 160,
+        "description": "Bom, falta de tempo você não tem. Que tal aprender a fazer um bolo? Pode ser de qualquer sabor, de qualquer tamanho: Apenas faça! Para isso, você pode até contar com a ajuda da internet. Os vídeos nas mídias sociais, como o YouTube, são boas fontes de pesquisa e certamente você encontrará várias receitas por lá. Não esqueça de tirar uma foto antes de comer!",
+        "img": "./img/bolo.png"
+    },
+    {
+        "title": "Começar um novo hobby!",
+        "amount": 90,
+        "description": "Para aliviar um pouco as angústias causadas pela quarentena, porque não mudar o seu foco pra algo produtivo e que pode até te gerar uma grana? Tire do armário aquela sua ideia que você não tinha tempo para tentar, que pode ir desde fazer aulas de violão até aprimorar seus dotes culinários! ",
+        "img": "./img/monociclo.png"
+    },
+    {
+        "title": "Ler um livro!",
+        "amount": 120,
+        "description": "A quanto tempo você não lê um livro? Não existe tempo melhor para aprimorar sua habilidade em leitura do que agora. Pegue aquele livro cheio de poeira no fundo do armário e conheça uma nova história! Criar o hábito de leitura trás diversos benefícios ao nosso cérebro, como: Desenvolver o vocabulário, melhorar a escrita, aprender novos fatos, etc.",
+        "img": "./img/livro.png"
+    },
+    {
+        "title": "Alongar-se!",
+        "amount": 100,
+        "description": "Se alongar relaxa o corpo e a mente, ajudando a aliviar o estresse causado em tempos tão difíceis como esse. Para isso, levante-se e incline o corpo para trás para alongar as costas. Coloque a mão na lombar e incline o tronco para trás de leve, sem flexionar os joelhos. Fique assim por alguns segundos e, em seguida, volte à posição inicial.",
+        "img": "./img/ioga.png"
+    },
+    {
+        "title": "Assistir a uma série ou filme!",
+        "amount": 50,
+        "description": "A cada notícia vem uma preocupação diferente. Por isso, também precisamos dar uma folga ao nosso cérebro. Pesquise alguma série ou um filme que você tenha interesse em ver, e assista sem culpa. Também vale assistir por vídeo chamada junto com alguém, viu? Assim evitamos aglomerações, e ainda temos uma boa companhia!",
+        "img": "./img/oculos.png"
+    }
+]
