@@ -9,16 +9,17 @@ const Missions = () => {
                 <div>
                     {allMissions.map((mission, i) => {
                         if (i < 3) {
-                            return <Mission mission={mission} i={i} />;
+                            return <Mission mission={mission} key={`first-row-${i}`} i={i} />;
                         }
                     })}
                 </div>
                 <div>
                     {allMissions.map((mission, i) => {
                         if (i >= 3) {
-                            return <Mission mission={mission} i={i} />;
+                            return <Mission mission={mission} key={`second-row-${i}`} i={i} />;
                         }
                     })}
+                    
                 </div>
             </div>
         </div>

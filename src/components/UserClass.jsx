@@ -6,11 +6,13 @@ const UserClass = () => {
   const { nameClass } = useContext(UserContext);
 
   return (
+    
     <div className={styles.container}>
+      
       <div>
         <span>Classe</span>
         <div className={styles.className}>
-          <div>
+          <div style={{ background: `var(--${nameClass.colors})`}}>
             <img src={nameClass.img} alt={nameClass.title} />
           </div>
           <div>
@@ -20,7 +22,9 @@ const UserClass = () => {
         </div>
         <p>{nameClass.description}</p>
       </div>
+      
     </div>
+  
   );
 };
 
