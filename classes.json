@@ -1,0 +1,26 @@
+[
+  {
+    "id": "0",
+    "title": "Artista",
+    "subtitle": "Criatividade, Pensamento",
+    "description": "O Artista tem o dom de sempre encontrar a melhor maneira para passar o tempo e pode ficar horas criando, movido apenas pela imaginação.",
+    "img": "./img/pinceis.png",
+    "colors": "blue"
+  },
+  {
+    "id": "1",
+    "title": "Estudioso(a)",
+    "subtitle": "Foco, Pensamento",
+    "description": "Para o(a) Estudioso(a), a dedicação aos estudos é a melhor forma de usar o tempo. \"Conhecimento nunca é demais\" é seu bordão.",
+    "img": "./img/chapeu.png",
+    "colors": "red"
+  },
+  {
+    "id": "2",
+    "title": "Explorador(a)",
+    "subtitle": "Criatividade, Curiosidade",
+    "description": "O(A) Explorador(a) está sempre procurando por algo novo. A sua mente é aberta para novas ideais e por isso se dá bem com praticamente todo o hobby ou passatempo.",
+    "img": "./img/bussola.png",
+    "colors": "yellow"
+  }
+]

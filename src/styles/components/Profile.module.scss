@@ -18,6 +18,9 @@
             color: var(--title);
             font-weight: 600;
             font-size: 1.3rem;
+            word-wrap: break-word;
+            display: block;
+            max-width: 210px;
         }
 
         & > span {

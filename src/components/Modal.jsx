@@ -10,8 +10,8 @@ const Modal = ({ id = "modal", onClose }) => {
     };
 
     function handleMissionSucceeded(e) {
-        completeMission()
-      }
+        completeMission();
+    }
 
     return (
         <div
@@ -47,7 +47,9 @@ const Modal = ({ id = "modal", onClose }) => {
                 </main>
 
                 <footer>
-                    <button type="button" onClick={handleMissionSucceeded}>Concluir</button>
+                    <button type="button" onClick={handleMissionSucceeded}>
+                        Concluir
+                    </button>
                 </footer>
             </div>
         </div>

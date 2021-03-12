@@ -1,5 +1,8 @@
-import { createContext, useEffect, useState } from "react";
-import allMissions from "../../missions.json";
+import { createContext, useEffect, useState, useContext } from "react";
+import artistaMissions from "../../artista.json";
+import exploradorMissions from "../../explorador.json";
+import estudiosoMissions from "../../estudioso.json";
+import { UserContext } from "./UserContext";
 
 export const MissionContext = createContext();
 
@@ -11,13 +14,26 @@ export default function MissionProvider({ children }) {
     const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
     const [unlockedMissions, setUnlockedMissions] = useState(0);
 
+    const { classMission } = useContext(UserContext);
     const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
     function newMission(e) {
         setIsModalOpen(true);
+        const artista = artistaMissions[e.target.id];
+        const explorador = exploradorMissions[e.target.id];
+        const estudioso = estudiosoMissions[e.target.id];
 
-        const mission = allMissions[e.target.id];
-        setActiveMission(mission);
+        switch (String(classMission).toLowerCase()) {
+            case "artista":
+                setActiveMission(artista);
+                break;
+            case "explorador":
+                setActiveMission(explorador);
+                break;
+            case "estudioso":
+                setActiveMission(estudioso);
+                break;
+        }
     }
 
     function resetMission() {

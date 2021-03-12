@@ -4,6 +4,7 @@ import { MissionContext } from "../contexts/MissionsContext";
 
 const Mission = ({ mission, i }) => {
     const { newMission, unlockedMissions } = useContext(MissionContext);
+    
     return (
         <div
             className={`${styles.mission} ${
