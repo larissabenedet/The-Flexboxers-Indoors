@@ -27,5 +27,21 @@
             color: var(--textColor);
             font-weight: 500;
         }
+
+        button {
+            float: right;
+            border: none;
+            font-family: Poppins;
+            background-color: var(--textColor);
+            color: var(--background);
+            padding: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button:focus {
+            outline: none;
+          }
+
     }
 }
