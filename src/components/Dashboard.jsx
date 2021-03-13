@@ -18,7 +18,7 @@ const Dashboard = () => {
         isLevelUpModalOpen,
         closeLevelUpModal,
     } = useContext(MissionContext);
-    const { isFirstTime, closeModalUser } = useContext(UserContext);
+    const { isFirstTime, closeModalUser, nameClass } = useContext(UserContext);
 
     return (
         <div className={styles.container}>
@@ -43,6 +43,7 @@ const Dashboard = () => {
 
             <svg
                 className={styles.wave}
+                style={{fill: `var(--${nameClass.colors})`}}
                 viewBox="0 0 1921 463"
                 xmlns="http://www.w3.org/2000/svg"
             >

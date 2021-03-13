@@ -6,9 +6,8 @@ import { UserContext } from "../contexts/UserContext.jsx";
 
 const Profile = () => {
     const { level } = useContext(MissionContext);
-
-    const { name, gender } = useContext(UserContext);
-
+    const { name, gender, handleEditar } = useContext(UserContext);
+    
     return (
         <div className={styles.container}>
             {gender === "masculino" ? (
@@ -17,6 +16,7 @@ const Profile = () => {
                 <img src="./img/feminino.png" />
             )}
             <div className={styles.info}>
+            <button type="button" onClick={handleEditar}>Editar</button>
                 <p>{name}</p>
                 <span>Nível {level}</span>
                 <XpBar />

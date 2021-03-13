@@ -8,15 +8,17 @@ export default function UserProvider({ children }) {
     const [gender, setGender] = useState("");
     const [nameClass, setNameClass] = useState({});
     const [isFirstTime, setIsFirstTime] = useState(true);
+    const [isEditing, setIsEditing] = useState(false);
     const [classMission, setClassMission] = useState("");
 
     function closeModalUser(e) {
-        e.preventDefault();
-        if (String(name).length > 30) {
-            setIsFirstTime(true);
-        } else {
-            Boolean(name) ? setIsFirstTime(false) : null;
-        }
+        // validações do form
+        String(name).length > 30 ? setIsFirstTime(true) 
+        : Boolean(name) ? setIsFirstTime(false) : null
+        
+        !gender && setIsFirstTime(true) 
+
+        !classMission && setIsFirstTime(true)
     }
 
     function handleGenderChange(e) {
@@ -33,6 +35,11 @@ export default function UserProvider({ children }) {
         setName(String(e.target.value));
     }
 
+    function handleEditar(e) {
+        setIsEditing(true)
+        setIsFirstTime(true)
+    }
+
     return (
         <UserContext.Provider
             value={{
@@ -45,6 +52,8 @@ export default function UserProvider({ children }) {
                 gender,
                 nameClass,
                 classMission,
+                handleEditar,
+                isEditing
             }}
         >
             {children}

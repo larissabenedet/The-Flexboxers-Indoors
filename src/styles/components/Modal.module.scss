@@ -88,36 +88,7 @@
         }
     }
 
-    .closeButton {
-        background-color: transparent;
-        position: absolute;
-        border: none;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        width: 30px;
-        height: 30px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        div {
-            width: 25px;
-            height: 2px;
-            border-radius: 3px;
-            background: var(--title);
-            position: absolute;
-        }
-
-        div:first-child {
-            transform: rotateZ(45deg);
-        }
-
-        div:last-child {
-            transform: rotateZ(-45deg);
-        }
-    }
+    
     .imgContainer {
         border-radius: 50%;
         border: solid 3px var(--gray);
@@ -141,5 +112,37 @@
         height: 35vh;
 
         max-width: 1000px;
+    }
+}
+
+.closeButton {
+    background-color: transparent;
+    color: black;
+    position: absolute;
+    border: none;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+        width: 25px;
+        height: 2px;
+        border-radius: 3px;
+        background: var(--title);
+        position: absolute;
+    }
+
+    div:first-child {
+        transform: rotateZ(45deg);
+    }
+
+    div:last-child {
+        transform: rotateZ(-45deg);
     }
 }
