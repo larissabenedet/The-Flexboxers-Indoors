@@ -18,9 +18,10 @@ export default function MissionProvider({ children }) {
     const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
     useEffect(() => {
-        Cookies.set('level', String(level))
-        Cookies.set('currentExperience', String(currentExperience))
-      }, [level, currentExperience])
+        Cookies.set("level", String(level));
+        Cookies.set("currentExperience", String(currentExperience));
+        Cookies.set("unlockedMissions", String(unlockedMissions));
+    }, [level, currentExperience, unlockedMissions]);
 
     function newMission(e) {
         setIsModalOpen(true);

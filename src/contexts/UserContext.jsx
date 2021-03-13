@@ -13,19 +13,24 @@ export default function UserProvider({ children }) {
     const [classMission, setClassMission] = useState("");
 
     useEffect(() => {
-        Cookies.set('name', String(name))
-        Cookies.set('gender', String(gender))
-        Cookies.set('nameClass', String(nameClass))
-      }, [name, gender, nameClass])
+        Cookies.set("name", String(name));
+        Cookies.set("gender", String(gender));
+        Cookies.set("nameClass", String(nameClass));
+        Cookies.set("classMission", String(classMission));
+        Cookies.set("isFirstTime", String(isFirstTime));
+    }, [name, gender, nameClass, classMission, isFirstTime]);
 
     function closeModalUser(e) {
         // validações do form
-        String(name).length > 30 ? setIsFirstTime(true) 
-        : Boolean(name) ? setIsFirstTime(false) : null
-        
-        !gender && setIsFirstTime(true) 
+        String(name).length > 30
+            ? setIsFirstTime(true)
+            : Boolean(name)
+            ? setIsFirstTime(false)
+            : null;
 
-        !classMission && setIsFirstTime(true)
+        !gender && setIsFirstTime(true);
+
+        !classMission && setIsFirstTime(true);
     }
 
     function handleGenderChange(e) {
@@ -43,8 +48,8 @@ export default function UserProvider({ children }) {
     }
 
     function handleEditar(e) {
-        setIsEditing(true)
-        setIsFirstTime(true)
+        setIsEditing(true);
+        setIsFirstTime(true);
     }
 
     return (
@@ -60,7 +65,7 @@ export default function UserProvider({ children }) {
                 nameClass,
                 classMission,
                 handleEditar,
-                isEditing
+                isEditing,
             }}
         >
             {children}
