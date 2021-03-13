@@ -11,9 +11,9 @@ const Profile = () => {
     return (
         <div className={styles.container}>
             {gender === "masculino" ? (
-                <img src="./img/masculino.png" />
+                <img src="./img/masculino.png" alt="Masculino" />
             ) : (
-                <img src="./img/feminino.png" />
+                <img src="./img/feminino.png" alt="Feminino" />
             )}
             <div className={styles.info}>
             <button type="button" onClick={handleEditar}>Editar</button>

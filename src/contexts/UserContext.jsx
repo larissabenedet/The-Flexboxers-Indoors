@@ -1,5 +1,6 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import allClasses from "../../classes.json";
+import Cookies from "js-cookie";
 
 export const UserContext = createContext();
 
@@ -10,6 +11,12 @@ export default function UserProvider({ children }) {
     const [isFirstTime, setIsFirstTime] = useState(true);
     const [isEditing, setIsEditing] = useState(false);
     const [classMission, setClassMission] = useState("");
+
+    useEffect(() => {
+        Cookies.set('name', String(name))
+        Cookies.set('gender', String(gender))
+        Cookies.set('nameClass', String(nameClass))
+      }, [name, gender, nameClass])
 
     function closeModalUser(e) {
         // validações do form

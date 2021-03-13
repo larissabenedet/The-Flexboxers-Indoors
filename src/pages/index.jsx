@@ -1,6 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/pages/Home.module.scss";
+import { GetServerSideProps } from 'next'
+import { UserContext } from "../contexts/UserContext";
+import { MissionContext } from "../contexts/MissionsContext";
 
 export default function Home() {
     return (
@@ -25,3 +28,4 @@ export default function Home() {
         </div>
     );
 }
+

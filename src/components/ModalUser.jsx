@@ -46,8 +46,9 @@ const ModalUser = ({ id = "modal", onClose }) => {
                         value="Masculino"
                       />
                       <label htmlFor="masculino">
-                        <img src="./img/masculino.png" alt="masculino" />
+                        <img src="./img/masculino.png" alt="Masculino" />
                       </label>
+                        <p className={styles.genderName}>Masculino</p>
                     </div>
                     <div>
                       <input
@@ -57,8 +58,9 @@ const ModalUser = ({ id = "modal", onClose }) => {
                         value="Feminino"
                       />
                       <label htmlFor="feminino">
-                        <img src="./img/feminino.png" alt="feminino" />
+                        <img src="./img/feminino.png" alt="Feminino" />
                       </label>
+                        <p className={styles.genderName}>Feminino</p>
                     </div>
                   </div>
                 </div>
@@ -69,21 +71,21 @@ const ModalUser = ({ id = "modal", onClose }) => {
                   <div>
                     <input type="radio" id="0" name="classe" value="Artista" />
                     <label htmlFor="0">
-                      <img src="../img/pinceis.png" />
+                      <img src="../img/pinceis.png" alt="Classe Artista"/>
                     </label>
                     <p>Artista</p>
                   </div>
                   <div>
                     <input type="radio" id="1" name="classe" value="Estudioso" />
                     <label htmlFor="1">
-                      <img src="../img/livro.png" />
+                      <img src="../img/livro.png" alt="Classe Estudioso"/>
                     </label>
                     <p>Estudioso(a)</p>
                   </div>
                   <div>
                     <input type="radio" id="2" name="classe" value="Explorador" />
                     <label htmlFor="2">
-                      <img src="../img/bussola.png" />
+                      <img src="../img/bussola.png" alt="Classe Explorador"/>
                     </label>
                     <p>Explorador(a)</p>
                   </div>
@@ -132,8 +134,9 @@ const ModalUser = ({ id = "modal", onClose }) => {
                         value="Masculino"
                       />
                       <label htmlFor="masculino">
-                        <img src="./img/masculino.png" alt="masculino" />
+                        <img src="./img/masculino.png" alt="Masculino" />
                       </label>
+                      <p className={styles.genderName}>Masculino</p>
                     </div>
                     <div>
                       <input
@@ -143,8 +146,9 @@ const ModalUser = ({ id = "modal", onClose }) => {
                         value="Feminino"
                       />
                       <label htmlFor="feminino">
-                        <img src="./img/feminino.png" alt="feminino" />
+                        <img src="./img/feminino.png" alt="Feminino" />
                       </label>
+                      <p className={styles.genderName}>Feminino</p>
                     </div>
                   </div>
                 </div>
@@ -155,28 +159,28 @@ const ModalUser = ({ id = "modal", onClose }) => {
                   <div>
                     <input type="radio" id="0" name="classe" value="Artista" />
                     <label htmlFor="0">
-                      <img src="../img/pinceis.png" />
+                      <img src="../img/pinceis.png" alt="Classe Artista"/>
                     </label>
                     <p>Artista</p>
                   </div>
                   <div>
                     <input type="radio" id="1" name="classe" value="Estudioso" />
                     <label htmlFor="1">
-                      <img src="../img/livro.png" />
+                      <img src="../img/livro.png" alt="Classe Estudioso"/>
                     </label>
                     <p>Estudioso(a)</p>
                   </div>
                   <div>
                     <input type="radio" id="2" name="classe" value="Explorador" />
                     <label htmlFor="2">
-                      <img src="../img/bussola.png" />
+                      <img src="../img/bussola.png" alt="Classe Explorador"/>
                     </label>
                     <p>Explorador(a)</p>
                   </div>
                 </div>
                 <button
                   className={styles.completeButton}
-                  type="submit"
+                  type="button"
                   onClick={onClose}
                 >
                   Concluído

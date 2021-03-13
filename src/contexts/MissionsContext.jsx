@@ -3,6 +3,7 @@ import artistaMissions from "../../artista.json";
 import exploradorMissions from "../../explorador.json";
 import estudiosoMissions from "../../estudioso.json";
 import { UserContext } from "./UserContext";
+import Cookies from "js-cookie";
 
 export const MissionContext = createContext();
 
@@ -13,9 +14,13 @@ export default function MissionProvider({ children }) {
     const [activeMission, setActiveMission] = useState(null);
     const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
     const [unlockedMissions, setUnlockedMissions] = useState(0);
-
     const { classMission } = useContext(UserContext);
     const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
+
+    useEffect(() => {
+        Cookies.set('level', String(level))
+        Cookies.set('currentExperience', String(currentExperience))
+      }, [level, currentExperience])
 
     function newMission(e) {
         setIsModalOpen(true);

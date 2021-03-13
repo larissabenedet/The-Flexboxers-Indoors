@@ -6,8 +6,8 @@ import Instructions from "../components/Instructions.jsx";
 import UserClass from "../components/UserClass.jsx";
 import { useContext } from "react";
 import { MissionContext } from "../contexts/MissionsContext";
-import Modal from "../components/Modal";
 import { UserContext } from "../contexts/UserContext";
+import Modal from "../components/Modal";
 import ModalUser from "../components/ModalUser";
 import LevelUpModal from "../components/LevelUpModal";
 
