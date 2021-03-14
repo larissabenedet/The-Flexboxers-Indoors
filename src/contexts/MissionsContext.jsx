@@ -7,13 +7,17 @@ import Cookies from "js-cookie";
 
 export const MissionContext = createContext();
 
-export default function MissionProvider({ children }) {
-    const [level, setLevel] = useState(1);
-    const [currentExperience, setCurrentExperience] = useState(0);
+export default function MissionProvider({ children, data }) {
+    const [level, setLevel] = useState(Number(data.level) || 1);
+    const [currentExperience, setCurrentExperience] = useState(
+        Number(data.currentExperience) || 0
+    );
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [activeMission, setActiveMission] = useState(null);
     const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
-    const [unlockedMissions, setUnlockedMissions] = useState(0);
+    const [unlockedMissions, setUnlockedMissions] = useState(
+        Number(data.unlockedMissions) - 1 || 0
+    );
     const { classMission } = useContext(UserContext);
     const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 

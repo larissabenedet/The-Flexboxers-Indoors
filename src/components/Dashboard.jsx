@@ -11,7 +11,7 @@ import Modal from "../components/Modal";
 import ModalUser from "../components/ModalUser";
 import LevelUpModal from "../components/LevelUpModal";
 
-const Dashboard = () => {
+const Dashboard = ({ data }) => {
     const {
         isModalOpen,
         closeMissionModal,
@@ -27,7 +27,7 @@ const Dashboard = () => {
             {isLevelUpModalOpen ? (
                 <LevelUpModal onClose={closeLevelUpModal} />
             ) : null}
-            
+
             <div className={styles.componentsWrapper}>
                 <div>
                     <DashboardMenu>
@@ -43,7 +43,7 @@ const Dashboard = () => {
 
             <svg
                 className={styles.wave}
-                style={{fill: `var(--${nameClass.colors})`}}
+                style={{ fill: `var(--${nameClass.colors})` }}
                 viewBox="0 0 1921 463"
                 xmlns="http://www.w3.org/2000/svg"
             >
