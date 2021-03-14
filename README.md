@@ -9,10 +9,6 @@ Diante desse cenário, o **Indoors** surge para te ajudar a superar as dificulda
 A aplicação reúne uma série de atividades de aperfeiçoamento pessoal, descobrimento e lazer que podem ser realizadas sem sair de casa de acordo com o seu foco e interesse. Escolha sua classe (artista, estudandioso ou explorador) e conclua missões para ganhar experiência e subir de nível!
 
 ## Índice
-
-- [Sobre o projeto](#sobre-o-projeto)
-- [Indoors](#indoors)
-  - [Índice](#índice)
   - [Copyright disclaimer](#copyright-disclaimer)
   - [Tecnologias utilizadas](#tecnologias-utilizadas)
   - [Como rodar o projeto](#como-rodar-o-projeto)
