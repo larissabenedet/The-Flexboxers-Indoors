@@ -70,7 +70,7 @@ export default function Sobre() {
                     <div>
                         <h2>João Vitor Martins Neto</h2>
                         <p>
-                            Cursando Física é apaixonado por ciência e
+                            Cursando Física, é apaixonado por ciência e
                             tecnologia e sempre busca uma forma para continuar a
                             aprender e a melhorar individualmente
                         </p>
