@@ -1,3 +1,5 @@
+# Sobre o projeto
+> Com o tema de portfolio criativo, o projeto consiste em ser um portfolio da equipe **The Flexboxers** que apresenta seu mais novo projeto: O Indoors.
 # Indoors
 
 A Organização Mundial da Saúde (OMS) lançou uma nota alertando que as incertezas e o medo gerados em relação ao coronavírus poderiam causar estresse, ansiedade e até depressão na população. De fato, a pandemia do covid-19 nos levou a uma situação extremamente atípica, na qual a maior ferramenta para o combate da doença é o isolamento social; uma faca de dois gumes, porque se de um lado ela nos protege da doença física, do outro nos expõe a enfermidades mentais.
@@ -8,10 +10,13 @@ A aplicação reúne uma série de atividades de aperfeiçoamento pessoal, desco
 
 ## Índice
 
--   [Copyright disclaimer](#copyright-disclaimer)
--   [Tecnologias utilizadas](#tecnologias-utilizadas)
--   [Como rodar o projeto](#como-rodar-o-projeto)
--   [A equipe](#a-equipe)
+- [Sobre o projeto](#sobre-o-projeto)
+- [Indoors](#indoors)
+  - [Índice](#índice)
+  - [Copyright disclaimer](#copyright-disclaimer)
+  - [Tecnologias utilizadas](#tecnologias-utilizadas)
+  - [Como rodar o projeto](#como-rodar-o-projeto)
+  - [A equipe](#a-equipe)
 
 ## Copyright disclaimer
 

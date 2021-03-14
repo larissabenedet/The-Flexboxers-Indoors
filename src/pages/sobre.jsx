@@ -17,9 +17,9 @@ export default function Sobre() {
                             Técnica em desenvolvimento de sistemas, estuda sobre
                             o mundo do desenvolvimento web, principalmente
                             Front-end, e está em busca de novas oportunidades
-                            profissionais para evoluir cada dia mais
+                            profissionais para evoluir cada dia mais.
                         </p>
-                        <span>Tecnologias: Next.js </span>
+                        <span>Tecnologias: Next.js, Sass </span>
                         <a
                             href="https://github.com/larissabenedet"
                             target="blank"
@@ -52,7 +52,7 @@ export default function Sobre() {
                             da Computação (IFCE), é aberto a desafios, mantém a
                             busca diária por novos conhecimentos e por
                             diferentes percepções, é apaixonado por tecnologia e
-                            engenharia de software
+                            engenharia de software.
                         </p>
                         <span>Tecnologias: Next.js, Node.js</span>
                         <a href="https://github.com/Kaue-G" target="blank">
@@ -72,7 +72,7 @@ export default function Sobre() {
                         <p>
                             Cursando Física, é apaixonado por ciência e
                             tecnologia e sempre busca uma forma para continuar a
-                            aprender e a melhorar individualmente
+                            aprender e a melhorar individualmente.
                         </p>
                         <span>
                             Tecnologias: Node.js, Express, Sequelize, MySQL,
