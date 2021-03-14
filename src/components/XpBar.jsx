@@ -3,15 +3,20 @@ import { useContext } from "react";
 import { MissionContext } from "../contexts/MissionsContext";
 
 const XpBar = () => {
-    const {currentExperience,experienceToNextLevel} = useContext(MissionContext)
-    const percentToNextLevel = Math.round(currentExperience * 100) / experienceToNextLevel
+    const { currentExperience, experienceToNextLevel } = useContext(
+        MissionContext
+    );
+    const percentToNextLevel =
+        Math.round(currentExperience * 100) / experienceToNextLevel;
 
     return (
         <div className={styles.container}>
             <div className={styles.XpContainer}>
-                <div style={{ width: `${percentToNextLevel}%`}}></div>
+                <div style={{ width: `${percentToNextLevel}%` }}></div>
             </div>
-            <span>{currentExperience}/{experienceToNextLevel}</span>
+            <span>
+                {currentExperience}/{experienceToNextLevel} xp
+            </span>
         </div>
     );
 };
