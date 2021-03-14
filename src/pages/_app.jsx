@@ -1,12 +1,7 @@
 import "../styles/globals.scss";
-import MissionProvider from "../contexts/MissionsContext";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <MissionProvider>
-      <Component {...pageProps} />;
-    </MissionProvider>
-  );
+    return <Component {...pageProps} />;
 }
 
 export default MyApp;

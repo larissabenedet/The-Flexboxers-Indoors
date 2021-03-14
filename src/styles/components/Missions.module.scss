@@ -1,53 +1,26 @@
 .container {
-  position: relative;
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.missionsTree {
-  padding: 2rem;
-  height: 80%;
-  width: 80%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
-  & > div {
-    height: 50%;
+    position: relative;
+    height: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
-  }
 }
 
-.mission {
-  background: var(--background);
-  width: 150px;
-  height: 150px;
-  padding: 10px;
-  border-radius: 50%;
-  border: solid 15px var(--green);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
-  margin: 20px;
+.missionsTree {
+    padding: 2rem;
+    height: 80%;
+    width: 80%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
-  transition: 200ms;
-  cursor: pointer;
+    & > div {
+        height: 50%;
 
-  & > img {
-    width: 70px;
-  }
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.4);
-  }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

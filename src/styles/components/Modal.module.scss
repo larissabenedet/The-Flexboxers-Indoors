@@ -5,37 +5,144 @@
     top: 0;
     left: 0;
     z-index: 10;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
-    
-        .container {
-            position: relative;
-            border: 3px solid var(--gray);
-            background-color: white;
-            color: #333;
-            width: 60%;
-            height: 60%;
+    backdrop-filter: blur(10px);
+
+    .container {
+        position: relative;
+        border: 3px solid var(--gray);
+        background-color: white;
+        color: #3c3c3c;
+        width: 60vw;
+        height: 55vh;
+        border-radius: 20px;
+        padding: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1),
+            0px 0px 60px rgba(0, 0, 0, 0.05);
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        div:last-child {
+            margin-left: 1.3rem;
+        }
+
+        h1 {
+            font-size: 1.3rem;
+            margin: 0;
+            padding: 0;
+            border-bottom: 2px solid var(--gray);
+        }
+
+        span {
+            font-weight: 500;
+        }
+    }
+
+    main {
+        margin-top: 2rem;
+
+        p {
+            text-align: justify;
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0 1.5rem 1.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        button {
+            border: none;
+            width: 130px;
+            height: 50px;
             border-radius: 10px;
-            padding: 15px;
-    
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-    
-            button {
-                background-color: transparent;
-                position: absolute;
-                border: none;
-                color: black;
-                padding: 10px;
-                font-weight: 500;
-                font-size: 20px;
-                top: 0;
-                right: 0;
-                cursor: pointer;
+            background: var(--green);
+            color: var(--background);
+            font-weight: 600;
+            font-size: 1rem;
+            font-family: "Poppins";
+            cursor: pointer;
+            transition: 200ms;
+
+            &:hover {
+                filter: brightness(0.9);
             }
         }
     }
+
+    
+    .imgContainer {
+        border-radius: 50%;
+        border: solid 3px var(--gray);
+
+        width: 5rem;
+        height: 5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > img {
+            width: 3rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .modalActive .container {
+        transform: scale(1.4);
+        height: 35vh;
+
+        max-width: 1000px;
+    }
+}
+
+.closeButton {
+    background-color: transparent;
+    color: black;
+    position: absolute;
+    border: none;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+        width: 25px;
+        height: 2px;
+        border-radius: 3px;
+        background: var(--title);
+        position: absolute;
+    }
+
+    div:first-child {
+        transform: rotateZ(45deg);
+    }
+
+    div:last-child {
+        transform: rotateZ(-45deg);
+    }
+}

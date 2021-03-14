@@ -6,13 +6,28 @@ import Instructions from "../components/Instructions.jsx";
 import UserClass from "../components/UserClass.jsx";
 import { useContext } from "react";
 import { MissionContext } from "../contexts/MissionsContext";
+import { UserContext } from "../contexts/UserContext";
 import Modal from "../components/Modal";
+import ModalUser from "../components/ModalUser";
+import LevelUpModal from "../components/LevelUpModal";
 
-const Dashboard = () => {
-    const { isModalOpen, closeMissionModal } = useContext(MissionContext);
+const Dashboard = ({ data }) => {
+    const {
+        isModalOpen,
+        closeMissionModal,
+        isLevelUpModalOpen,
+        closeLevelUpModal,
+    } = useContext(MissionContext);
+    const { isFirstTime, closeModalUser, nameClass } = useContext(UserContext);
+
     return (
         <div className={styles.container}>
             {isModalOpen ? <Modal onClose={closeMissionModal} /> : null}
+            {isFirstTime ? <ModalUser onClose={closeModalUser} /> : null}
+            {isLevelUpModalOpen ? (
+                <LevelUpModal onClose={closeLevelUpModal} />
+            ) : null}
+
             <div className={styles.componentsWrapper}>
                 <div>
                     <DashboardMenu>
@@ -22,13 +37,13 @@ const Dashboard = () => {
                 </div>
                 <div>
                     <Instructions />
-                    <Missions>
-                    </Missions>
+                    <Missions></Missions>
                 </div>
             </div>
 
             <svg
                 className={styles.wave}
+                style={{ fill: `var(--${nameClass.colors})` }}
                 viewBox="0 0 1921 463"
                 xmlns="http://www.w3.org/2000/svg"
             >

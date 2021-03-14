@@ -1,72 +1,110 @@
-import { createContext, useState } from "react";
-import allMissions from "../../missions.json";
+import { createContext, useEffect, useState, useContext } from "react";
+import artistaMissions from "../../artista.json";
+import exploradorMissions from "../../explorador.json";
+import estudiosoMissions from "../../estudioso.json";
+import { UserContext } from "./UserContext";
+import Cookies from "js-cookie";
 
 export const MissionContext = createContext();
 
-export default function MissionProvider({ children }) {
-  const [level, setLevel] = useState(0);
-  const [currentExperience, setCurrentExperience] = useState(76);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [activeMission, setActiveMission] = useState(null);
-  const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
-  const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
+export default function MissionProvider({ children, data }) {
+    const [level, setLevel] = useState(Number(data.level) || 1);
+    const [currentExperience, setCurrentExperience] = useState(
+        Number(data.currentExperience) || 0
+    );
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [activeMission, setActiveMission] = useState(null);
+    const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
+    const [unlockedMissions, setUnlockedMissions] = useState(
+        Number(data.unlockedMissions) - 1 || 0
+    );
+    const { classMission } = useContext(UserContext);
+    const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
-  function newMission() {
-    setIsModalOpen(true);
-    const mission = allMissions[0];
-    setActiveMission(mission);
-  }
+    useEffect(() => {
+        Cookies.set("level", String(level));
+        Cookies.set("currentExperience", String(currentExperience));
+        Cookies.set("unlockedMissions", String(unlockedMissions));
+    }, [level, currentExperience, unlockedMissions]);
 
-  function resetMission() {
-    setActiveMission(null);
-  }
+    function newMission(e) {
+        setIsModalOpen(true);
+        const artista = artistaMissions[e.target.id];
+        const explorador = exploradorMissions[e.target.id];
+        const estudioso = estudiosoMissions[e.target.id];
 
-  function completeMission() {
-    if (!activeMission) return;
-
-    const { amount } = activeMission;
-
-    let finalExperience = currentExperience + amount;
-
-    if (finalExperience >= experienceToNextLevel) {
-      finalExperience = finalExperience - experienceToNextLevel;
-      levelUp();
+        switch (String(classMission).toLowerCase()) {
+            case "artista":
+                setActiveMission(artista);
+                break;
+            case "explorador":
+                setActiveMission(explorador);
+                break;
+            case "estudioso":
+                setActiveMission(estudioso);
+                break;
+        }
     }
 
-    setCurrentExperience(finalExperience);
-    setActiveMission(null);
-  }
+    function resetMission() {
+        setActiveMission(null);
+    }
 
-  function levelUp() {
-    setLevel(level + 1);
+    function completeMission() {
+        if (!activeMission) return;
 
-    setIsLevelUpModalOpen(true);
-  }
+        const { amount } = activeMission;
 
-  function closeMissionModal() {
-    setIsModalOpen(false);
-  }
+        let finalExperience = currentExperience + amount;
 
-  function closeLevelUpModal() {
-    setIsLevelUpModalOpen(false);
-  }
+        if (finalExperience >= experienceToNextLevel) {
+            finalExperience = finalExperience - experienceToNextLevel;
+            levelUp();
+        }
 
-  return (
-    <MissionContext.Provider
-      value={{
-        level,
-        currentExperience,
-        isLevelUpModalOpen,
-        isModalOpen,
-        closeLevelUpModal,
-        activeMission,
-        completeMission,
-        resetMission,
-        newMission,
-        closeMissionModal,
-      }}
-    >
-      {children}
-    </MissionContext.Provider>
-  );
+        setCurrentExperience(finalExperience);
+        closeMissionModal();
+        setActiveMission(null);
+    }
+
+    function levelUp() {
+        setLevel(level + 1);
+
+        setIsLevelUpModalOpen(true);
+    }
+
+    function closeMissionModal() {
+        setIsModalOpen(false);
+    }
+
+    function closeLevelUpModal() {
+        setIsLevelUpModalOpen(false);
+    }
+
+    function unlockMission() {
+        setUnlockedMissions(unlockedMissions + 1);
+    }
+
+    useEffect(unlockMission, [level]);
+
+    return (
+        <MissionContext.Provider
+            value={{
+                level,
+                currentExperience,
+                experienceToNextLevel,
+                isLevelUpModalOpen,
+                isModalOpen,
+                closeLevelUpModal,
+                activeMission,
+                completeMission,
+                resetMission,
+                newMission,
+                closeMissionModal,
+                unlockedMissions,
+            }}
+        >
+            {children}
+        </MissionContext.Provider>
+    );
 }

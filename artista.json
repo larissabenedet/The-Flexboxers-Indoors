@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Visite museus sem sair do lugar!",
+        "amount": 120,
+        "description": "Você sabia que é possível visitar exposições de arte em Paris e Londres sem sair de casa? Existem vários museus virtuais espalhados pela internet que oferecem tours online muito bem feitas. Alguns exemplos são o site Arts and Culture do Google, ou se você preferir museus nacionais pode visitar o site do Pinacoteca do estado de SP ou o Museu Casa de Portinari.",
+        "img": "./img/museu.png"
+    },
+    {
+        "title": "Fazer um desenho no papel!",
+        "amount": 100,
+        "description": "Quanto tempo faz que você não pega um lápis e um papel para desenhar? Solte sua criatividade e se expresse através da arte: Sendo preto e branco ou colorido, talvez você se surpreenda com o resultado final! Além de ter um toque de nostalgia...",
+        "img": "./img/desenhar.png"
+    },
+    {
+        "title": "Participar de leituras conjuntas online!",
+        "amount": 130,
+        "description": "Já sabemos que ler nos proporciona diversos benefícios, sobretudo culturais. Porque não juntar o útil ao agradável e se juntar com mais pessoas que também têm interesse na leitura? Você pode participar de sprints em canais da Twitch, ou de clubes do livro promovidos por influenciadores no Youtube. Além de estar adquirindo conhecimento, você também pode socializar com novas pessoas que compartilham de interesses parecidos com o seu.",
+        "img": "./img/leitura.png"
+    },
+    {
+        "title": "Escrever uma história!",
+        "amount": 120,
+        "description": "Seja um poema, poesia, letra de música ou capítulos de um livro, toda história tem seu valor. Liberte seus sentimentos e imaginação escrevendo sobre o que quiser!",
+        "img": "./img/escrever.png"
+    },
+    {
+        "title": "Ouvir música!",
+        "amount": 60,
+        "description": "A mais popular das artes, rolando alto nos fones de ouvido e nas caixas de som dos vizinhos. A gente sabe que você provavelmente já segue todos os seus músicos favoritos nas redes sociais, então a missão aqui é tirar uns minutinhos para relaxar ouvindo aquele som que te faz bem!",
+        "img": "./img/musica.png"
+    }
+]
