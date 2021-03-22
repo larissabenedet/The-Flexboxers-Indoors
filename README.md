@@ -1,4 +1,6 @@
-# Sobre o projeto
+# Sobre
+> A equipe The Flexboxers realizou esse projeto no primeiro campeonato do servidor da Rafaella Ballerini  
+
 > Com o tema de portfolio criativo, o projeto consiste em ser um portfolio da equipe **The Flexboxers** que apresenta seu mais novo projeto: O Indoors.
 # Indoors
 
