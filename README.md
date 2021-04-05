@@ -1,5 +1,5 @@
 # Sobre
-> A equipe The Flexboxers realizou esse projeto no primeiro campeonato do servidor da Rafaella Ballerini  
+> A equipe The Flexboxers realizou esse projeto no primeiro campeonato do servidor da Rafaella Ballerini.
 
 > Com o tema de portfolio criativo, o projeto consiste em ser um portfolio da equipe **The Flexboxers** que apresenta seu mais novo projeto: O Indoors.
 # Indoors
@@ -8,7 +8,7 @@ A Organização Mundial da Saúde (OMS) lançou uma nota alertando que as incert
 
 Diante desse cenário, o **Indoors** surge para te ajudar a superar as dificuldades causadas pelo sentimento de solidão e improdutividade e para te auxiliar na descoberta de novos hábitos e hobbies.
 
-A aplicação reúne uma série de atividades de aperfeiçoamento pessoal, descobrimento e lazer que podem ser realizadas sem sair de casa de acordo com o seu foco e interesse. Escolha sua classe (artista, estudandioso ou explorador) e conclua missões para ganhar experiência e subir de nível!
+A aplicação reúne uma série de atividades de aperfeiçoamento pessoal, descobrimento e lazer que podem ser realizadas sem sair de casa de acordo com o seu foco e interesse. Escolha sua classe (artista, estudioso ou explorador) e conclua missões para ganhar experiência e subir de nível!
 
 ## Índice
   - [Copyright disclaimer](#copyright-disclaimer)
